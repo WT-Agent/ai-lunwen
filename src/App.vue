@@ -481,7 +481,7 @@ const metricsList = [
   { key: 'formatNorm', label: '格式规范度 (Format Norm)' }
 ];
 
-const aiScores = ref<{ academicRigor: number; literatureDepth: number; outlineLogic: number; innovationValue: number; formatNorm: number; } | null>(null);
+const aiScores = ref<Record<string, number> | null>(null);
 
 interface HistoryItem {
   id: string;
@@ -490,7 +490,7 @@ interface HistoryItem {
   destination: string;
   degree: string;
   wordCount: string;
-  aiScores: { academicRigor: number; literatureDepth: number; outlineLogic: number; innovationValue: number; formatNorm: number; } | null;
+  aiScores: Record<string, number> | null;
   output: string;
 }
 
